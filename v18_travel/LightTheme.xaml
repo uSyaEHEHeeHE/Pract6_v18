@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="WindowBackground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="TextColor" Color="Black"/>
+    <SolidColorBrush x:Key="FieldBackground" Color="White"/>
+    <SolidColorBrush x:Key="BorderColor" Color="Gray"/>
+    <SolidColorBrush x:Key="PrimaryBackground" Color="LightGray"/>
+    <SolidColorBrush x:Key="PrimaryForeground" Color="Black"/>
+    <SolidColorBrush x:Key="SecondaryBackground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="DangerText" Color="Firebrick"/>
+    <SolidColorBrush x:Key="AccentColor" Color="DarkSlateGray"/>
+
+</ResourceDictionary>

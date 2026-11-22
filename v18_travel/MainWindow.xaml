@@ -1,0 +1,42 @@
+﻿<Window x:Class="v18_travel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource {x:Type Window}}"
+        Title="MainWindow">
+    <ScrollViewer Style="{StaticResource FormScroll}">
+        <StackPanel>
+            <TextBlock Text="Поиск маршрута"/>
+            <TextBlock Text="Откуда"/>
+            <TextBox/>
+            <TextBlock Text="Куда"/>
+            <TextBox/>
+            <TextBlock Text="Транспорт"/>
+            <ComboBox x:Name ="TransportCombo" SelectedIndex="0" SelectionChanged="TransportCombo_SelectionChanged">
+                <ComboBoxItem Content="Поезд"/>
+                <ComboBoxItem Content="Автобус"/>
+            </ComboBox>
+
+            <TextBlock Text="Примеры предложений"/>
+            <WrapPanel>
+                <RadioButton Content="08:30, 950 руб." GroupName="Offers" IsChecked="True"/>
+                <RadioButton Content="12:15, 1100 руб." GroupName="Offers"/>
+            </WrapPanel>
+
+            <TextBlock Text="Занято мест"/>
+            <ProgressBar Value="45" x:Name="Seats"/>
+
+            <TextBlock Text="Комментарий к поездке"/>
+            <TextBox Style="{StaticResource NotesBox}"/>
+
+            <CheckBox x:Name="ProtectBookingBox" Content="Я уверен в поездке"/>
+
+            <WrapPanel>
+                <Button Content="Найти" Style="{StaticResource MainButton}"/>
+                <Button Content="Очистить" Style="{StaticResource SecondaryButton}"/>
+                <Button Content="Отменить бронь" Style="{StaticResource DangerButton}" Tag="{Binding IsChecked, ElementName=ProtectBookingBox}"/>
+                <Button Content="Сменить тему" Style="{StaticResource SecondaryButton}" Click="ChangeTheme_Click"/>
+            </WrapPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
